@@ -3,9 +3,9 @@
 <img width="75" height="15" alt="image" src="https://github.com/user-attachments/assets/4c2a6d4e-036b-4925-82fb-a617b67fe6f9" />
 <img width="62" height="15" alt="image" src="https://github.com/user-attachments/assets/21aceae9-7a63-4253-82c3-99035691e76b" />
 
-🔬 Abstract <br>
+# 🔬 Abstract <br>
 DermaMamba introduces a novel dual-branch fusion architecture that synergistically combines CNN-based local feature extraction with Vision Mamba (VMamba) for efficient skin lesion classification. Our approach achieves 92.1% accuracy on the ISIC dataset with linear complexity O(n), representing a 2.0% improvement over state-of-the-art methods while delivering 2.3× inference speedup and 40% memory reduction. <br>
-✨ Key Features <br>
+# ✨ Key Features <br>
 🚀 Linear Complexity: VMamba-based global context modeling with O(n) complexity vs O(n²) for transformers <br>
 🔄 Dual-Branch Architecture: Synergistic fusion of CNN local features and VMamba global context <br>
 🏥 Medical Domain Integration: ABCDE rule features and clinical examination-inspired scanning patterns <br>
@@ -42,15 +42,49 @@ All improvements are statistically significant (p < 0.001)<br>
 Large effect sizes (Cohen's d > 0.8) across all metrics<br>
 95% confidence intervals through bootstrap analysis<br>
 <br>
-
-🚀 Quick Start<br>
-Installation<br>
+# 🚀 Quick Start <br>
+# Installation <br>
 # Clone the repository <br>
 git clone https://github.com/your-username/DermaMamba.git <br>
 cd DermaMamba <br>
 # Create conda environment  <br>
 conda create -n dermamamba python=3.8  <br>
 conda activate dermamamba  <br>
+# Install dependencies
+
+pip install -r requirements.txt
+
+# Install VMamba selective scan kernel
+
+cd selective_scan && pip install.
+
+### Dependencies
+
+torch>=2.0.1
+
+torchvision>=0.15.1
+
+numpy>=1.21.0
+
+opencv-python>=4.5.0
+
+albumentations>=1.3.0
+
+timm>=0.9.0
+
+einops>=0.6.0
+
+scikit-learn>=1.0.0
+
+matplotlib>=3.5.0
+
+seaborn>=0.11.0
+
+tqdm>=4.64.0
+
+# Dataset Preparation
+
+
 
 
 
