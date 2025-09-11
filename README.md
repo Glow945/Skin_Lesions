@@ -1,4 +1,4 @@
-DermaMamba: A Dual-Branch Vision Mamba Architecture with Linear Complexity for Efficient Skin Lesion Classification<br>
+# DermaMamba: A Dual-Branch Vision Mamba Architecture with Linear Complexity for Efficient Skin Lesion Classification<br>
 <img width="65" height="15" alt="image" src="https://github.com/user-attachments/assets/544033e7-5869-4c8b-8728-aee683c8b475" />
 <img width="75" height="15" alt="image" src="https://github.com/user-attachments/assets/4c2a6d4e-036b-4925-82fb-a617b67fe6f9" />
 <img width="62" height="15" alt="image" src="https://github.com/user-attachments/assets/21aceae9-7a63-4253-82c3-99035691e76b" />
@@ -36,6 +36,26 @@ Main Results on ISIC Dataset <br>
 |ViT-Base	|87.4	|87.1	|86.9	|87.0	|0.3×	|180%|
 |Med-ViT	|90.1	|89.7	|90.5	|90.1|	0.4×	|165%|
 |DermaMamba	|92.1	|91.7	|91.3	|91.5	|2.3×	|60%|
+<br>
+Statistical Significance<br>
+All improvements are statistically significant (p < 0.001)<br>
+Large effect sizes (Cohen's d > 0.8) across all metrics<br>
+95% confidence intervals through bootstrap analysis<br>
+<br>
+
+🚀 Quick Start<br>
+Installation<br>
+# Clone the repository <br>
+git clone https://github.com/your-username/DermaMamba.git <br>
+cd DermaMamba <br>
+# Create conda environment  <br>
+conda create -n dermamamba python=3.8  <br>
+conda activate dermamamba  <br>
+
+
+
+
+
 
 
 
