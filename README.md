@@ -42,19 +42,20 @@ All improvements are statistically significant (p < 0.001)<br>
 Large effect sizes (Cohen's d > 0.8) across all metrics<br>
 95% confidence intervals through bootstrap analysis<br>
 <br>
+
 # 🚀 Quick Start <br>
-# Installation <br>
-# Clone the repository <br>
+## Installation <br>
+## Clone the repository <br>
 git clone https://github.com/your-username/DermaMamba.git <br>
 cd DermaMamba <br>
-# Create conda environment  <br>
+## Create conda environment  <br>
 conda create -n dermamamba python=3.8  <br>
 conda activate dermamamba  <br>
-# Install dependencies
+## Install dependencies
 
 pip install -r requirements.txt
 
-# Install VMamba selective scan kernel
+## Install VMamba selective scan kernel
 
 cd selective_scan && pip install.
 
