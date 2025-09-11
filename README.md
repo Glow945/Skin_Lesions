@@ -26,6 +26,7 @@ Spiral Scanning: Mimics clinical examination patterns <br>
 Radial Scanning: Captures center-to-periphery relationships <br>
 Boundary-Aware Scanning: Focuses on lesion contours <br>
 Raster Scanning: Traditional sequential processing <br>
+<br>
 📊 Performance Results
 Main Results on ISIC Dataset <br>
 | Method  |  Accuracy (%) | Precision (%)   |Recall (%)|Macro-F1 (%)|Speedup|Memory|
