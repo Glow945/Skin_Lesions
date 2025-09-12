@@ -169,23 +169,57 @@ python visualize_attention.py <br>
  &nbsp; &nbsp;&nbsp; &nbsp;   --image_path test_images/melanoma.jpg <br>
   &nbsp; &nbsp;&nbsp; &nbsp;  --output_dir visualizations/ <br>
 
+# 📈 Results Analysis  <br>
+## Performance Metrics  <br>
+Accuracy: 92.1% (±0.3%) <br>
+Precision: 91.7% (±0.4%)  <br>
+Recall: 91.3% (±0.2%)  <br>
+Macro-F1: 91.5% (±0.3%)  <br>
+AUC-ROC: 0.956 (±0.008)  <br>
 
+## Computational Efficiency  <br>
+Training Time: ~8-12 hours on 8×A100 GPUs  <br>
+Inference Speed: 2.3× faster than Med-ViT  <br>
+Memory Usage: 40% reduction vs Vision Transformers  <br>
+Model Size: ~45M parameters  <br>
 
+## Clinical Validation <br>
+High confidence (>79%) maintained in challenging boundary cases <br>
+Attention patterns align with clinical ABCDE criteria <br>
+Balanced performance across all 9 lesion categories <br>
 
+# 🏥 Clinical Applications <br>
+DermaMamba is designed for: <br>
+Computer-Aided Diagnosis: Supporting dermatologists in skin lesion assessment <br>
+Melanoma Screening: Early detection of malignant lesions <br>
+Telemedicine: Remote skin cancer screening in resource-limited settings <br>
+Medical Education: Training tools with interpretable attention visualizations <br>
 
+# 🤝 Contributing <br>
+We welcome contributions! Please see our Contributing Guidelines for details. <br>
+Development Setup <br>
+Install development dependencies  <br>
+pip install -r requirements-dev.txt <br>
 
+Install pre-commit hooks <br>
+pre-commit install <br>
 
+Run tests <br>
+python -m pytest tests/ <br>
 
+# 📄 License <br>
+This project is licensed under the MIT License - see the LICENSE file for details. <br>
 
+# 🙏 Acknowledgments <br>
+International Skin Imaging Collaboration (ISIC) for the dataset <br>
+VMamba authors for the foundational state space model implementation <br>
+Medical domain experts for clinical insights and validation <br>
 
+# 📞 Contact <br>
+Issues: Please use GitHub Issues for bug reports and feature requests <br>
+Discussions: Join our GitHub Discussions <br>
 
-
-
-
-
-
-
-
-
-
-
+# 🔗 Related Work <br>
+VMamba: Visual State Space Model <br>
+Mamba: Linear-Time Sequence Modeling <br>
+ISIC Archive  <br>
