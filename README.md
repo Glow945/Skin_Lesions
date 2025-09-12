@@ -83,7 +83,71 @@ seaborn>=0.11.0
 
 tqdm>=4.64.0
 
-# Dataset Preparation
+# Dataset Preparation<br>
+### Download ISIC dataset<br>
+python scripts/download_isic.py --output_dir data/
+
+### Preprocess data <br>
+python scripts/preprocess_data.py \
+ &nbsp; &nbsp;&nbsp; &nbsp;   --data_dir data/ISIC \
+ &nbsp; &nbsp;&nbsp; &nbsp;   --output_dir data/processed \
+ &nbsp; &nbsp;&nbsp; &nbsp;   --image_size 224
+### Training
+### Train DermaMamba
+python train.py \
+&nbsp; &nbsp;&nbsp; &nbsp;    --config configs/dermamamba.yaml \
+&nbsp; &nbsp;&nbsp; &nbsp;    --data_dir data/processed \
+&nbsp; &nbsp;&nbsp; &nbsp;   --output_dir experiments/dermamamba \
+&nbsp; &nbsp;&nbsp; &nbsp;    --gpus 0,1,2,3
+
+### Resume training from checkpoint
+python train.py \
+&nbsp; &nbsp;&nbsp; &nbsp;     --config configs/dermamamba.yaml \
+&nbsp; &nbsp;&nbsp; &nbsp;     --resume experiments/dermamamba/checkpoints/best.pth
+
+### Inference
+# Single image inference
+python inference.py \
+&nbsp; &nbsp;&nbsp; &nbsp;     --model_path experiments/dermamamba/checkpoints/best.pth \
+&nbsp; &nbsp;&nbsp; &nbsp;     --image_path test_images/lesion.jpg \
+&nbsp; &nbsp;&nbsp; &nbsp;    --output_dir results/
+
+### Batch inference
+python inference.py \
+&nbsp; &nbsp;&nbsp; &nbsp;     --model_path experiments/dermamamba/checkpoints/best.pth \
+&nbsp; &nbsp;&nbsp; &nbsp;     --data_dir test_images/ \
+&nbsp; &nbsp;&nbsp; &nbsp;     --output_dir results/ \
+&nbsp; &nbsp;&nbsp; &nbsp;     --batch_size 32
+
+# 📁 Project Structure
+```bash
+DermaMamba/ 
+├── configs/                 # Configuration files 
+│   ├── dermamamba.yaml     # Main model config 
+│   └── ablation/           # Ablation study configs 
+├── data/                   # Dataset directory 
+├── models/                 # Model implementations 
+│   ├── dermamamba.py      # Main DermaMamba model 
+│   ├── vmamba.py          # VMamba implementation 
+│   ├── fusion.py          # State space fusion module 
+│   └── attention.py       # Attention mechanisms 
+├── datasets/              # Dataset classes 
+├── utils/                 # Utility functions 
+├── scripts/               # Data processing scripts 
+├── experiments/           # Training outputs 
+├── assets/               # Documentation assets 
+├── train.py              # Training script 
+├── inference.py          # Inference script 
+├── evaluate.py           # Evaluation script 
+└── requirements.txt      # Dependencies 
+```
+
+
+
+
+
+
+
 
 
 
