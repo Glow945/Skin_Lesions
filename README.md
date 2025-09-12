@@ -141,6 +141,36 @@ DermaMamba/
 ├── evaluate.py           # Evaluation script 
 └── requirements.txt      # Dependencies 
 ```
+# 🔬 Reproducing Results <br>
+## Ablation  <br>
+### Run complete ablation study <br>
+bash scripts/run_ablation.sh
+
+# Individual ablation experiments<br>
+python train.py --config configs/ablation/cnn_only.yaml <br>
+python train.py --config configs/ablation/spatial_attention.yaml <br>
+python train.py --config configs/ablation/vmamba_added.yaml <br>
+
+# Hyperparameter Analysis <br>
+## Learning rate sweep <br>
+python scripts/hyperparameter_sweep.py <br>
+&nbsp; &nbsp;&nbsp; &nbsp; --param learning_rate <br>
+&nbsp; &nbsp;&nbsp; &nbsp; --values 1e-5 5e-5 1e-4 5e-4 1e-3 <br>
+
+## Batch size analysis <br>
+python scripts/hyperparameter_sweep.py <br>
+&nbsp; &nbsp;&nbsp; &nbsp;    --param batch_size <br>
+&nbsp; &nbsp;&nbsp; &nbsp;    --values 16 32 64 128 256 <br>
+
+## Attention Visualization <br>
+### Generate attention maps <br>
+python visualize_attention.py <br>
+&nbsp; &nbsp;&nbsp; &nbsp;    --model_path experiments/dermamamba/checkpoints/best.pth <br>
+ &nbsp; &nbsp;&nbsp; &nbsp;   --image_path test_images/melanoma.jpg <br>
+  &nbsp; &nbsp;&nbsp; &nbsp;  --output_dir visualizations/ <br>
+
+
+
 
 
 
